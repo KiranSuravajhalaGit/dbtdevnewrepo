@@ -39,12 +39,15 @@ models:
   my_new_project:
     # Applies to all files under models/example/
     stg:
-      +materialized: view
+      +materialized: table
+      +transient: true
+      +schema: dbt_stg
     integration:
       +materialized: table
       +transient: false
+      +schema: dbt_int
      
     gold:
-      +materialized: table
-      +transient: true
+      +materialized: view
+      +schema: dbt_gold
      
