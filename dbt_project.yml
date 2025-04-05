@@ -41,13 +41,16 @@ models:
     stg:
       +materialized: table
       +transient: true
+      +database: Staging
       +schema: dbt_stg
     integration:
       +materialized: table
       +transient: false
+      +database: Integration
       +schema: dbt_int
      
     gold:
       +materialized: view
+      +database: Gold
       +schema: dbt_gold
      
