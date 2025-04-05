@@ -1,18 +1,23 @@
 version: 2
 models:
   - name: jaffle_shop_customer
+    description: Staged customer from our Jaffle shop app
     columns:
       - name: id
+        description: Primary key for customers
         tests: 
           - not_null
           - unique
   - name: jaffle_shop_orders
+    description: Staged orders from our Jaffle shop app
     columns:
       - name: id
+        description: Primary Key for Orders table
         tests:
          - unique
          - not_null
       - name: status
+        description: "{{doc(order_status)}}"
         tests:
           - accepted_values:
               values:
@@ -22,6 +27,7 @@ models:
                 - return_pending
                 - placed
       - name: user_id
+        description: Foreign Key for Customer table
         tests:
           - relationships:
               to: ref('jaffle_shop_customer')

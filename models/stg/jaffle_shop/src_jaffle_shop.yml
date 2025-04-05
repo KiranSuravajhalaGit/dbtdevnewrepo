@@ -6,5 +6,7 @@ sources:
     schema: jaffle_shop
     tables:
       - name: customers
+        description: Customer Source table
         
       - name: orders
+        description: Orders Source table
