@@ -42,7 +42,9 @@ models:
       +materialized: view
     integration:
       +materialized: table
+      +transient: false
      
     gold:
       +materialized: table
+      +transient: true
      

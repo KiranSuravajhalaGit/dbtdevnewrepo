@@ -1,4 +1,6 @@
-{{ config(materialized="table", transient = false) }}
+/*{{ config(materialized="table", transient = false) }}
+moved this to project yaml
+*/
 
 
 with cte_customer as (

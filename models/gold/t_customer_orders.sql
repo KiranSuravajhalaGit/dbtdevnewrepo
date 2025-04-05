@@ -1,5 +1,6 @@
-{{ config(materialized="view") }}
-
+/*{{ config(materialized="view") }}
+moved this to project yaml
+*/
 
 with cte_customer_orders as (
 select c.cust_id as cust_id, c.first_name, c.last_name, o.order_id as order_id, o.order_date, o.status
