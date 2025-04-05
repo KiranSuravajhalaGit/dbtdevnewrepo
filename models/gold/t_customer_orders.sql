@@ -1,4 +1,4 @@
-{{ config(materialized="table", transient = false) }}
+{{ config(materialized="view") }}
 
 
 with cte_customer_orders as (

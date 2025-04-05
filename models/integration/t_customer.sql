@@ -1,4 +1,4 @@
-{{ config(materialized="table", transient = true) }}
+{{ config(materialized="table", transient = false) }}
 
 
 with cte_customer as (
