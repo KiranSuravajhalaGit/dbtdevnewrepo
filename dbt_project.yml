@@ -38,5 +38,19 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   my_new_project:
     # Applies to all files under models/example/
-    example:
+    stg:
       +materialized: table
+      +transient: true
+      +database: stagingDB
+      +schema: dbt_stg
+    integration:
+      +materialized: table
+      +transient: false
+      +database: integrationDB
+      +schema: dbt_int
+     
+    gold:
+      +materialized: view
+      +database: goldDB
+      +schema: dbt_gold
+     
