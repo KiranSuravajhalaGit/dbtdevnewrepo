@@ -2,4 +2,6 @@
 moved this to project yaml
 */
 select *
-from RAW.JAFFLE_SHOP.ORDERS 
+from 
+---RAW.JAFFLE_SHOP.ORDERS 
+{{ source('jaffle_shop','orders') }}
